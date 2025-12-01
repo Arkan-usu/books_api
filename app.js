@@ -8,19 +8,19 @@ app.use(cors)
 
 
 // menampilkan Buku
-app.get("/books", async(req,res)=>{})
+// app.get("/books", async(req,res)=>{})
 
 // menampilkan buku berdasarkan id
-app.get("/books/id", async(req,res)=>{})
+// app.get("/books/id", async(req,res)=>{})
 
 // tambah buku
-app.post("/books", async(req,res)=>{})
+// app.post("/books", async(req,res)=>{})
 
 // update buku
-app.put("/books/id", async(req,res)=>{})
+// app.put("/books/id", async(req,res)=>{})
 
 // hapus buku
-app.delete("/books/id", async(req,res)=>{})
+// app.delete("/books/id", async(req,res)=>{})
 
 // ! API
 
@@ -196,5 +196,6 @@ app.delete("/books/:id", async (req, res) => {
     res.status(500).json({ error: true, message: "Server Error" });
   }
 });
+
 
 module.exports = app;
