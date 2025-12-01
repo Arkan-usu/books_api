@@ -1,26 +1,11 @@
-const express = require('express')
-const app = express()
-const cors = require('cors')
-const pool = require("./db")
+const express = require("express");
+const cors = require("cors");
+const pool = require("./db");
 
-app.use(express.json())
-app.use(cors)
-
-
-// menampilkan Buku
-// app.get("/books", async(req,res)=>{})
-
-// menampilkan buku berdasarkan id
-// app.get("/books/id", async(req,res)=>{})
-
-// tambah buku
-// app.post("/books", async(req,res)=>{})
-
-// update buku
-// app.put("/books/id", async(req,res)=>{})
-
-// hapus buku
-// app.delete("/books/id", async(req,res)=>{})
+const app = express();
+// ? Middleware
+app.use(express.json());
+app.use(cors());
 
 // ! API
 
@@ -196,6 +181,5 @@ app.delete("/books/:id", async (req, res) => {
     res.status(500).json({ error: true, message: "Server Error" });
   }
 });
-
 
 module.exports = app;
